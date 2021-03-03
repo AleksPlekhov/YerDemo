@@ -1,0 +1,64 @@
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto" xmlns:tools="http://schemas.android.com/tools"
+>
+
+    <data>
+
+
+        <variable
+                name="vm"
+                type="com.aquayer.presentation.feature.lamp_power.LampPowerVM"/>
+    </data>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            app:layout_behavior="@string/appbar_scrolling_view_behavior"
+
+    >
+
+
+        <TextView
+                android:id="@+id/tvTitle"
+                style="@style/TvTitle"
+                tools:text="sdfsdfsdfsdf"
+                tools:textColor="@color/blue"
+                tools:ignore="MissingConstraints"
+                android:text="@string/tv_lamp_power"
+        />
+
+
+        <Button
+                android:id="@+id/btnLampPower4"
+                style="@style/BtnRed"
+                tools:ignore="MissingConstraints"
+                app:layout_constraintTop_toBottomOf="@+id/tvTitle"
+                android:text="@string/btnLampPower4"
+                android:onClick="@{vm::onClickLampLum_1}"
+        />
+        <Button
+                android:id="@+id/btnLampPower3"
+                style="@style/BtnRed"
+                tools:ignore="MissingConstraints"
+                app:layout_constraintTop_toBottomOf="@+id/btnLampPower4"
+                android:text="@string/btnbtnLampPower3"
+                android:onClick="@{vm::onClickLampLum_0_7}"
+        />
+        <Button
+                android:id="@+id/btnLampPower2"
+                style="@style/BtnRed"
+                tools:ignore="MissingConstraints"
+                app:layout_constraintTop_toBottomOf="@+id/btnLampPower3"
+                android:text="@string/btnbtnLampPower2"
+                android:onClick="@{vm::onClickLampLed_0_5}"
+        />
+        <Button
+                android:id="@+id/btnLampPower1"
+                style="@style/BtnRed"
+                tools:ignore="MissingConstraints"
+                app:layout_constraintTop_toBottomOf="@+id/btnLampPower2"
+                android:text="@string/btnbtnLampPower1"
+                android:onClick="@{vm::onClickLampLed_0_35}"
+        />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>

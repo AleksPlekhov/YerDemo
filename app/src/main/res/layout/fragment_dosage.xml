@@ -1,0 +1,78 @@
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto" xmlns:tools="http://schemas.android.com/tools"
+>
+
+    <data>
+
+
+        <variable
+                name="vm"
+                type="com.aquayer.presentation.feature.dosage.DosageVM"/>
+    </data>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            app:layout_behavior="@string/appbar_scrolling_view_behavior"
+
+    >
+
+
+        <TextView
+                android:id="@+id/tvTitle"
+                style="@style/TvTitle"
+
+                tools:text="sdfsdf sdfsdfsdf  sdfsdfsdf sdfsdfsdf sdfsdf sdfsdf sdfsdf"
+
+                tools:ignore="MissingConstraints"
+                android:text="@string/tv_dosage"
+        />
+
+
+        <androidx.recyclerview.widget.RecyclerView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                app:layout_constraintWidth_default="percent"
+                app:layout_constraintWidth_percent="0.9"
+                app:layout_constraintTop_toBottomOf="@+id/tvTitle"
+                app:layout_constraintBottom_toTopOf="@+id/btnReCount"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintRight_toRightOf="parent"
+                app:itemBinding="@{vm.itemBindings}"
+                app:items="@{vm.items}"
+                app:setupRecyclerView="@{true}"
+                tools:listitem="@layout/item_dosage"
+        >
+
+        </androidx.recyclerview.widget.RecyclerView>
+
+
+        <Button
+                android:id="@+id/btnReCount"
+                style="@style/BtnRed"
+                tools:ignore="MissingConstraints"
+                app:layout_constraintBottom_toTopOf="@+id/guideline"
+                android:text="@string/btnRecount"
+                android:backgroundTint="@color/blue"
+                android:onClick="@{vm::onClickReCount}"
+        />
+
+        <Button
+                android:id="@+id/btn_help"
+                style="@style/BtnRed"
+                tools:ignore="MissingConstraints"
+                app:layout_constraintTop_toBottomOf="@+id/guideline"
+                android:text="@string/btn_help"
+                android:backgroundTint="@color/blue"
+                android:onClick="@{vm::onClickHelp}"
+        />
+
+        <androidx.constraintlayout.widget.Guideline
+                android:id="@+id/guideline"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                app:layout_constraintGuide_percent="0.70"/>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>

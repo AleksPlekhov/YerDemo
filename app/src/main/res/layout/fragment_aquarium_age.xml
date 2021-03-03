@@ -1,0 +1,56 @@
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto" xmlns:tools="http://schemas.android.com/tools"
+>
+
+    <data>
+
+
+        <variable
+                name="vm"
+                type="com.aquayer.presentation.feature.aquarium_age.AquariumAgeVM"/>
+    </data>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            app:layout_behavior="@string/appbar_scrolling_view_behavior"
+
+    >
+
+
+        <TextView
+                android:id="@+id/tvTitle"
+                style="@style/TvTitle"
+                tools:text="sdfsdfsdfsdf"
+                tools:textColor="@color/blue"
+                tools:ignore="MissingConstraints"
+                android:text="@string/tv_aquarium_age"
+        />
+
+
+        <Button
+                android:id="@+id/btnAge1Month"
+                style="@style/BtnRed"
+                tools:ignore="MissingConstraints"
+                app:layout_constraintTop_toBottomOf="@+id/tvTitle"
+                android:text="@string/btnAge1Month"
+                android:onClick="@{vm::onClickAge1Month}"
+        />
+        <Button
+                android:id="@+id/btnAgeMore18Months"
+                style="@style/BtnRed"
+                tools:ignore="MissingConstraints"
+                app:layout_constraintTop_toBottomOf="@+id/btnAge1Month"
+                android:text="@string/btnAgeMore18Months"
+                android:onClick="@{vm::onClickAgeMore18Months}"
+        />
+        <Button
+                android:id="@+id/btnAgeOther"
+                style="@style/BtnRed"
+                tools:ignore="MissingConstraints"
+                app:layout_constraintTop_toBottomOf="@+id/btnAgeMore18Months"
+                android:text="@string/btnAgeOther"
+                android:onClick="@{vm::onClickAgeOther}"
+        />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>

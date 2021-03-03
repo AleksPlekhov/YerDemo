@@ -1,0 +1,125 @@
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+
+        <variable
+                name="vm"
+                type="com.aquayer.presentation.feature.water_volume.WaterVolumeVM" />
+    </data>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+
+            app:layout_behavior="@string/appbar_scrolling_view_behavior"
+
+            >
+
+
+        <TextView
+                android:id="@+id/tvTitle"
+                style="@style/TvTitle"
+                android:text="@string/tv_enter_volume"
+                tools:ignore="MissingConstraints"
+                tools:text="sdfsdfsdfsdf"
+
+                tools:textColor="@color/blue" />
+
+        <EditText
+                android:id="@+id/etLiter"
+                android:layout_width="0dp"
+
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/mrg_side"
+                android:background="@android:color/transparent"
+                android:fontFamily="@font/akrobat_bold"
+                android:gravity="center_horizontal"
+                android:imeOptions="actionDone"
+                android:inputType="number"
+                android:maxLength="3"
+                android:text="@={vm.waterVolume}"
+                android:textColor="@color/blue"
+                android:textColorHint="@color/etTextHint"
+                android:textCursorDrawable="@color/blue"
+                android:textSize="75sp"
+                app:layout_constraintLeft_toLeftOf="@id/imgCircle"
+                app:layout_constraintRight_toRightOf="@id/imgCircle"
+                app:layout_constraintTop_toTopOf="@+id/imgCircle" />
+
+
+        <TextView
+                android:id="@+id/tvLiter"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:fontFamily="@font/akrobat_bold"
+                android:gravity="center_horizontal"
+                android:text="@string/litre"
+                android:textAppearance="@android:style/TextAppearance.Material.Title"
+                android:textColor="@color/blue"
+                app:layout_constraintLeft_toLeftOf="@id/imgCircle"
+                app:layout_constraintRight_toRightOf="@id/imgCircle"
+                app:layout_constraintTop_toBottomOf="@+id/etLiter"
+                tools:text="литров" />
+
+        <ImageView
+                android:id="@+id/imgCircle"
+                android:layout_width="200dp"
+                android:layout_height="200dp"
+                android:layout_marginTop="@dimen/mrg_8"
+                android:src="@drawable/circle_around_litre"
+                app:layout_constraintLeft_toLeftOf="parent"
+
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/tvTitle"
+
+                />
+
+
+        <TextView
+                android:id="@+id/tvDescription"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/mrg_8"
+                android:fontFamily="@font/akrobat_bold"
+                android:gravity="center"
+                android:text="@string/tv_volume_desctiption"
+                android:textAppearance="@android:style/TextAppearance.Material.Small"
+                android:textColor="@color/white"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/imgCircle"
+                app:layout_constraintWidth_default="percent"
+                app:layout_constraintWidth_percent="0.75"
+                tools:text="@string/tv_volume_desctiption"
+                tools:textColor="@color/blue" />
+
+
+        <Button
+                android:id="@+id/btnNext"
+                style="@style/BtnRed"
+                android:onClick="@{vm::onClickNext}"
+                android:text="@string/btnNext"
+                app:layout_constraintTop_toBottomOf="@+id/tvDescription"
+
+                tools:ignore="MissingConstraints" />
+
+        <androidx.appcompat.widget.AppCompatImageView
+                android:id="@+id/imgAdv"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:onClick="@{()-> vm.onClickAdv()}"
+                android:scaleType="fitEnd"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/btnNext"
+                tools:src="@drawable/img_adv"
+                app:setRemoteImageView="@{vm.urlAdv}"
+
+                />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>

@@ -1,0 +1,50 @@
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto" xmlns:tools="http://schemas.android.com/tools"
+>
+
+    <data>
+
+
+        <variable
+                name="vm"
+                type="com.aquayer.presentation.feature.plants_kind.PlantsKindVM"/>
+    </data>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            app:layout_behavior="@string/appbar_scrolling_view_behavior"
+
+    >
+
+
+        <TextView
+                android:id="@+id/tvTitle"
+                style="@style/TvTitle"
+                tools:text="sdfsdfsdfsdf"
+                tools:textColor="@color/blue"
+                tools:ignore="MissingConstraints"
+                android:text="@string/tv_plants_kind"
+        />
+
+
+        <Button
+                android:id="@+id/btnYes"
+                style="@style/BtnRed"
+                tools:ignore="MissingConstraints"
+                app:layout_constraintTop_toBottomOf="@+id/tvTitle"
+                android:text="@string/btnYes"
+                android:onClick="@{vm::onClickYes}"
+        />
+        <Button
+                android:id="@+id/btnNo"
+                style="@style/BtnRed"
+                tools:ignore="MissingConstraints"
+                app:layout_constraintTop_toBottomOf="@+id/btnYes"
+                android:text="@string/btnNo"
+                android:onClick="@{vm::onClickNo}"
+        />
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>

@@ -1,0 +1,87 @@
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto" xmlns:tools="http://schemas.android.com/tools"
+>
+
+    <data>
+
+
+        <variable
+                name="vm"
+                type="com.aquayer.presentation.feature.plants_number.PlantsNumberVM"/>
+    </data>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            app:layout_behavior="@string/appbar_scrolling_view_behavior"
+
+    >
+
+
+        <TextView
+                android:id="@+id/tvTitle"
+                style="@style/TvTitle"
+                tools:text="sdfsdfsdfsdf"
+                tools:textColor="@color/blue"
+                tools:ignore="MissingConstraints"
+                android:text="@string/tv_plants_amount"
+        />
+
+
+        <ImageView
+                android:id="@+id/img_plants_few"
+                style="@style/ImgFish"
+                android:layout_marginTop="@dimen/mrg_16"
+                android:src="@drawable/img_plant_few"
+                android:onClick="@{vm::onClickPlantsFew}"
+                app:layout_constraintTop_toBottomOf="@+id/tvTitle"
+        />
+        <Button
+                android:id="@+id/btnPlantsFew"
+                style="@style/BtnRedSmall"
+                app:layout_constraintTop_toTopOf="@+id/img_plants_few"
+                android:layout_marginTop="80dp"
+                tools:ignore="MissingConstraints"
+                android:text="@string/btnPlantsFew"
+                android:onClick="@{vm::onClickPlantsFew}"
+        />
+
+
+        <ImageView
+                android:id="@+id/img_plants_mid"
+                style="@style/ImgFish"
+                android:src="@drawable/img_plant_mid"
+                android:onClick="@{vm::onClickPlantsFew}"
+                app:layout_constraintTop_toBottomOf="@+id/img_plants_few"
+        />
+        <Button
+                android:id="@+id/btnPlantsMid"
+                style="@style/BtnRedSmall"
+                tools:ignore="MissingConstraints"
+                app:layout_constraintTop_toTopOf="@+id/img_plants_mid"
+                android:text="@string/btnPlantsMid"
+                android:layout_marginTop="80dp"
+                android:onClick="@{vm::onClickPlantsFew}"
+        />
+
+
+        <ImageView
+                android:id="@+id/img_plants_many"
+                style="@style/ImgFish"
+                android:src="@drawable/img_plant_many"
+                android:onClick="@{vm::onClickPlantsMany}"
+                app:layout_constraintTop_toBottomOf="@+id/img_plants_mid"
+        />
+
+        <Button
+                android:id="@+id/btnFishLot"
+                style="@style/BtnRedSmall"
+                tools:ignore="MissingConstraints"
+                app:layout_constraintTop_toTopOf="@+id/img_plants_many"
+                android:text="@string/btnPlantsLot"
+                android:layout_marginTop="80dp"
+                android:onClick="@{vm::onClickPlantsMany}"
+        />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>

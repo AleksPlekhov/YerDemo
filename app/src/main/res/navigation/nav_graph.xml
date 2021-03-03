@@ -1,0 +1,151 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+            xmlns:app="http://schemas.android.com/apk/res-auto"
+            xmlns:tools="http://schemas.android.com/tools"
+            android:id="@+id/nav_graph"
+            app:startDestination="@id/WaterVolumeFragment"
+>
+
+
+    <fragment android:id="@+id/WaterVolumeFragment"
+              android:name="com.aquayer.presentation.feature.water_volume.WaterVolumeFragment"
+              tools:layout="@layout/fragment_water_volume"
+
+              android:label="SelectMarkFragment">
+
+        <action android:id="@+id/next_action"
+
+                app:destination="@id/FishAmountFragment"/>
+
+    </fragment>
+
+    <fragment android:id="@+id/FishAmountFragment"
+              android:name="com.aquayer.presentation.feature.fish_number.FishNumberFragment"
+              tools:layout="@layout/fragment_fish_number"
+
+              android:label="FishAmountFragment">
+        <action android:id="@+id/next_action"
+
+                app:destination="@id/Co2PresenceFragment"
+        />
+
+
+    </fragment>
+
+    <fragment android:id="@+id/Co2PresenceFragment"
+              android:name="com.aquayer.presentation.feature.co2_presence.Co2PresenceFragment"
+              tools:layout="@layout/fragment_co2_presence"
+
+              android:label="Co2PresenceFragment">
+
+        <action android:id="@+id/next_action"
+
+                app:destination="@id/PlantsAmountFragment"/>
+
+        <action android:id="@+id/next_action_2"
+
+                app:destination="@id/AquariumAgeFragment"/>
+
+    </fragment>
+
+
+    <fragment android:id="@+id/PlantsAmountFragment"
+              android:name="com.aquayer.presentation.feature.plants_number.PlantsNumberFragment"
+              tools:layout="@layout/fragment_plants_number"
+
+              android:label="PlantsAmountFragment">
+
+        <action android:id="@+id/next_action"
+
+                app:destination="@id/LampPowerFragment"/>
+
+        <action android:id="@+id/next_action_2"
+
+                app:destination="@id/WaterHardnessFragment"/>
+
+    </fragment>
+
+
+    <fragment android:id="@+id/LampPowerFragment"
+              android:name="com.aquayer.presentation.feature.lamp_power.LampPowerFragment"
+              tools:layout="@layout/fragment_lamp_power"
+
+              android:label="LampPowerFragment">
+
+        <action android:id="@+id/next_action"
+
+                app:destination="@id/PlantsKindFragment"/>
+
+        <action android:id="@+id/next_action_2"
+
+                app:destination="@id/WaterHardnessFragment"/>
+
+    </fragment>
+
+    <fragment android:id="@+id/PlantsKindFragment"
+              android:name="com.aquayer.presentation.feature.plants_kind.PlantsKindFragment"
+              tools:layout="@layout/fragment_plants_kind"
+
+              android:label="PlantsKindFragment">
+
+        <action android:id="@+id/next_action"
+
+                app:destination="@id/WaterHardnessFragment"/>
+
+    </fragment>
+
+
+    <fragment android:id="@+id/WaterHardnessFragment"
+              android:name="com.aquayer.presentation.feature.water_hardness.WaterHardnessFragment"
+              tools:layout="@layout/fragment_water_hardness"
+
+              android:label="WaterHardnessFragment">
+
+        <action android:id="@+id/next_action"
+
+
+                app:destination="@id/AquariumAgeFragment"/>
+
+    </fragment>
+
+
+    <fragment android:id="@+id/AquariumAgeFragment"
+              android:name="com.aquayer.presentation.feature.aquarium_age.AquariumAgeFragment"
+              tools:layout="@layout/fragment_aquarium_age">
+
+
+        <action android:id="@+id/next_action"
+
+
+                app:popUpTo="@+id/nav_graph"
+
+
+                app:destination="@id/DosageFragment"/>
+
+    </fragment>
+
+
+    <!--
+
+    =================                       =================
+                          FINAL SCREEN
+    =================                       =================
+
+    -->
+
+    <fragment android:id="@+id/DosageFragment"
+              android:name="com.aquayer.presentation.feature.dosage.DosageFragment"
+              tools:layout="@layout/fragment_dosage"
+
+              android:label="DosageFragment">
+
+        <action android:id="@+id/next_action"
+
+                app:popUpTo="@+id/nav_graph"
+                app:destination="@id/WaterVolumeFragment"/>
+
+
+    </fragment>
+
+
+</navigation>

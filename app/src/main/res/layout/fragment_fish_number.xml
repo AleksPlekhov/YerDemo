@@ -1,0 +1,68 @@
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto" xmlns:tools="http://schemas.android.com/tools"
+>
+
+    <data>
+
+
+        <variable
+                name="vm"
+                type="com.aquayer.presentation.feature.fish_number.FishNumberVM"/>
+    </data>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+
+            app:layout_behavior="@string/appbar_scrolling_view_behavior"
+
+    >
+
+
+        <TextView
+                android:id="@+id/tvTitle"
+                android:text="@string/tv_fish_amount"
+                style="@style/TvTitle"
+                tools:text="sdfsdfsdfsdf"
+                tools:textColor="@color/blue"
+                tools:ignore="MissingConstraints"
+        />
+
+
+        <ImageView
+                android:id="@+id/img_fish_many"
+                style="@style/ImgFish"
+                android:src="@drawable/img_fish_many"
+                android:onClick="@{vm::onClickFishMany}"
+                app:layout_constraintTop_toBottomOf="@+id/tvTitle"
+        />
+
+        <Button
+                android:id="@+id/btnFishMany"
+                style="@style/BtnRedSmall"
+                android:text="@string/btnFishMany"
+                android:onClick="@{vm::onClickFishMany}"
+                app:layout_constraintTop_toTopOf="@+id/img_fish_many"
+                android:layout_marginTop="80dp"
+                tools:ignore="MissingConstraints"/>
+
+        <ImageView
+                android:id="@+id/img_fish_few"
+                android:src="@drawable/img_fish_few"
+                style="@style/ImgFish"
+                android:onClick="@{vm::onClickFishFew}"
+                app:layout_constraintTop_toBottomOf="@+id/img_fish_many"
+        />
+
+        <Button
+                android:id="@+id/btnFishFew"
+                style="@style/BtnRedSmall"
+                tools:ignore="MissingConstraints"
+                app:layout_constraintTop_toTopOf="@+id/img_fish_few"
+                android:layout_marginTop="80dp"
+                android:text="@string/btnFishFew"
+                android:onClick="@{vm::onClickFishFew}"
+        />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>

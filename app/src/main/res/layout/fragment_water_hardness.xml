@@ -1,0 +1,61 @@
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto" xmlns:tools="http://schemas.android.com/tools"
+>
+
+    <data>
+
+
+        <variable
+                name="vm"
+                type="com.aquayer.presentation.feature.water_hardness.WaterHardnessVM"/>
+    </data>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+
+            app:layout_behavior="@string/appbar_scrolling_view_behavior"
+
+    >
+
+
+        <TextView
+                android:id="@+id/tvTitle"
+                style="@style/TvTitle"
+                tools:text="sdfsdfsdfsdf"
+                tools:textColor="@color/blue"
+                tools:ignore="MissingConstraints"
+                android:autoLink="web"
+                android:textColorLink="@color/blue"
+                android:onClick="@{vm::onClickTitle}"
+                android:text="@string/tv_water_hardness"
+        />
+
+
+        <Button
+                android:id="@+id/btnHardnessMore10"
+                style="@style/BtnRed"
+                tools:ignore="MissingConstraints"
+                app:layout_constraintTop_toBottomOf="@+id/tvTitle"
+                android:text="@string/btnHardnessMore10"
+                android:onClick="@{vm::onClickHardnessMore10}"
+        />
+        <Button
+                android:id="@+id/btnHardnessLess10"
+                style="@style/BtnRed"
+                tools:ignore="MissingConstraints"
+                app:layout_constraintTop_toBottomOf="@+id/btnHardnessMore10"
+                android:text="@string/btnHardnessLess10"
+                android:onClick="@{vm::onClickHardnessLess10}"
+        />
+        <Button
+                android:id="@+id/btnHardnessUnknown"
+                style="@style/BtnRed"
+                tools:ignore="MissingConstraints"
+                app:layout_constraintTop_toBottomOf="@+id/btnHardnessLess10"
+                android:text="@string/btnHardnessUnknown"
+                android:onClick="@{vm::onClickHardnessUnknown}"
+        />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>

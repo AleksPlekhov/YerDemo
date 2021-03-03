@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="mrg_side">32dp</dimen>
+    <dimen name="mrg_16">16dp</dimen>
+    <dimen name="mrg_32">32dp</dimen>
+    <dimen name="mrg_48">48dp</dimen>
+    <dimen name="mrg_8">8dp</dimen>
+    <dimen name="btn_height">40dp</dimen>
+    <dimen name="btn_height_small">30dp</dimen>
+    <dimen name="tv_title">22sp</dimen>
+    <dimen name="tv_dosage">18sp</dimen>
+    <dimen name="mrg_top_logo">26dp</dimen>
+</resources>

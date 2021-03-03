@@ -1,0 +1,51 @@
+<resources>
+    <string name="app_name">AQUAYER Калькулятор</string>
+    <string name="litre">ЛІТРІВ</string>
+    <string name="tv_enter_volume">Введіть об\'єм \n води в акваріумі</string>
+    <string name="btnNext">Далі</string>
+    <string name="tv_volume_desctiption">Об\'єм води в акваріумі зазвичай дорівнює 80% від об\'єму акваріума. Якщо ви
+        знаєте більш точний об\'єм води в акваріумі, введіть його.
+    </string>
+    <string name="tv_fish_amount">Кількість риб \n в акваріумі</string>
+    <string name="btnFishFew">Мало риб</string>
+    <string name="btnFishMany">Багато риб</string>
+    <string name="btnYes">Так</string>
+    <string name="btnNo">Ні</string>
+    <string name="tv_is_co2_present">Чи подається СО2 \n в акваріум?</string>
+    <string name="btnAge1Month">0–1 місяць</string>
+    <string name="btnAgeMore18Months">Більше 18 місяців</string>
+    <string name="btnAgeOther">Інший випадок</string>
+    <string name="tv_aquarium_age">Вік акваріуму \n з рослинами, який з моменту \n запуску обслуговувався з добривами
+        AQUAYER
+    </string>
+    <string name="tv_dosage">Дозування добрив:</string>
+    <string name="btnRecount">Розрахувати наново</string>
+    <string name="tv_plants_amount">Яка кількість рослин \n в акваріумі?</string>
+    <string name="btnPlantsFew">Мало</string>
+    <string name="btnPlantsMid">Середня</string>
+    <string name="btnPlantsLot">Багато</string>
+    <string name="tv_water_hardness">
+        <a href="http://">Карбонатна твердість</a>
+        \n води в акваріумі:
+    </string>
+    <string name="btnHardnessMore10">Більше ніж 10 градусів</string>
+    <string name="btnHardnessUnknown">Невідомо</string>
+    <string name="btnHardnessLess10">Менше ніж 10 градусів</string>
+    <string name="tv_lamp_power">Потужність ламп \n освітлення в акваріумі</string>
+    <string name="btnLampPower4">0.8–1 ватт/л люмінесцентних ламп</string>
+    <string name="btnbtnLampPower3">0.5–0.7 ватт/л люмінесцентних ламп</string>
+    <string name="btnbtnLampPower2">0.4–0.5 ватт/л світлодіодного освітлення</string>
+    <string name="btnbtnLampPower1">0.2–0.35 ватт/л світлодіодного освітлення</string>
+    <string name="tv_plants_kind">В акваріумі більш ніж 70% рослин відносяться до анубіасів, папороті, криптокоринам,
+        ехінодорусам, мохам (окрім риччії), лілеопсисам та іншим рослинам, що повільно ростуть.
+    </string>
+    <string name="hint_water_volume">200</string>
+
+    <string name="dosage_micro_plus">%s мл Удо Єрмолаєва МІКРО+ на день</string>
+    <string name="dosage_macro_plus">%s мл Удо Єрмолаєва МАКРО+  на день</string>
+    <string name="dosage_iron_plus">%s мл Удо Єрмолаєва ЗАЛІЗО+  на день.\n Можна вносити подвійне дозування кожний
+        другий день.
+    </string>
+    <string name="dosage_potash_plus">%s мл Удо Єрмолаєва КАЛІЙ+ щотижня \n протягом місяця</string>
+    <string name="btn_help">Отримати консультацію</string>
+</resources>

@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="url_micro_plus" translatable="false">http://aquayer.com/index.php?page=udobreniya-ermolaeva</string>
+    <string name="url_macro_plus" translatable="false">http://aquayer.com/index.php?page=udo-ermolaeva</string>
+    <string name="url_potash_plus" translatable="false">http://aquayer.com/index.php?page=kaliy</string>
+    <string name="url_iron_plus" translatable="false">http://aquayer.com/index.php?page=zhelezo</string>
+    <string name="url_water_hardness" translatable="false">http://aquayer.com/index.php?page=KH-test</string>
+    <string name="url_help" translatable="false">https://aquascape-promotion.com/aquaforum/index.php?/topic/92-dozirovki-udobreniy-aquayer-na-vash-akvarium-rekomendatsii/</string>
+    <string name="url_adv" translatable="false">http://aquayer.com/calc-link.htm</string>
+</resources>

@@ -1,0 +1,71 @@
+apply plugin: 'com.android.application'
+
+apply plugin: 'kotlin-android'
+apply plugin: 'kotlin-kapt'
+apply plugin: 'kotlin-android-extensions'
+apply plugin: 'io.fabric'
+
+android {
+    compileSdkVersion 28
+    defaultConfig {
+        applicationId "com.aquayer"
+        minSdkVersion 21
+        targetSdkVersion 28
+        versionCode 6
+        versionName "1.0.8"
+        testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
+    }
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+        }
+    }
+    dataBinding {
+        enabled = true
+    }
+}
+
+dependencies {
+    implementation fileTree(dir: 'libs', include: ['*.jar'])
+    implementation "org.jetbrains.kotlin:kotlin-stdlib-jdk7:$kotlin_version"
+    implementation "androidx.core:core-ktx:$core_ctx"
+    implementation "androidx.constraintlayout:constraintlayout:$constraint"
+    implementation "com.google.android.material:material:$material"
+    /** Google */
+    implementation "androidx.appcompat:appcompat:${support}"
+    implementation "androidx.annotation:annotation:${support}"
+
+
+    testImplementation 'junit:junit:4.12'
+    androidTestImplementation 'androidx.test:runner:1.1.2-alpha01'
+    androidTestImplementation 'androidx.test.espresso:espresso-core:3.1.2-alpha01'
+    /** Dagger2 */
+    implementation "com.google.dagger:dagger:$dagger2"
+    kapt "com.google.dagger:dagger-compiler:$dagger2"
+    /** Coroutines */
+    implementation "org.jetbrains.kotlinx:kotlinx-coroutines-core:$coroutines"
+    implementation "org.jetbrains.kotlinx:kotlinx-coroutines-android:$coroutines"
+    implementation "org.jetbrains.kotlinx:kotlinx-coroutines-rx2:$coroutines"
+    /** RxJava2  */
+    implementation "io.reactivex.rxjava2:rxjava:$rx_java2"
+    implementation "io.reactivex.rxjava2:rxandroid:$rx_java2_android"
+    /** AAC **/
+    implementation "androidx.lifecycle:lifecycle-extensions:$lifecycle_version"
+    implementation "androidx.room:room-runtime:$room_version"
+    // implementation "androidx.room:room-rxjava2:$room_version" // optional - RxJava support for Room
+    implementation "androidx.room:room-coroutines:$room_version" // optional - Coroutines support for Room
+    implementation "android.arch.navigation:navigation-fragment:$nav_version"
+    implementation "android.arch.navigation:navigation-ui:$nav_version"
+
+    implementation 'com.github.bumptech.glide:glide:4.10.0'
+
+    implementation('com.crashlytics.sdk.android:crashlytics:2.9.9@aar') {
+        transitive = true;
+    }
+
+    implementation "org.jetbrains.anko:anko-commons:$anko"
+    /** List adapter */
+    implementation "me.tatarka.bindingcollectionadapter2:bindingcollectionadapter:$binding_collection_adapter"
+    implementation "me.tatarka.bindingcollectionadapter2:bindingcollectionadapter-recyclerview:$binding_collection_adapter"
+}
